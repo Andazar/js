@@ -1,6 +1,7 @@
 /* 
 Это мой первый JavaScript. 
 */
-const H = "Hello, JavaScript!!!";
+const T1 = "Hello, JavaScript!!!";
+const T2 = "It is my test prog.";
 
-console.log(H);//смотреть по F12
+console.log(T1, T2);//смотреть по F12
