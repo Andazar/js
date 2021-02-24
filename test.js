@@ -27,3 +27,5 @@ console.log(String(N2)/String(N1)); //2
 
 console.log(Boolean(T1));
 console.log(Boolean(N3));
+
+console.log(typeof T1);
