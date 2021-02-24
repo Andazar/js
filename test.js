@@ -21,9 +21,9 @@ console.log(`${N1} ${N2}`); //смотреть по F12
 [T3,T4] =[T4,T3];
 console.log(`${T3} ${T4}`); //смотреть по F12
 
-let S1 = String(N2);
-let S2 = String(N1);
-console.log(S1/S2); //2
+//let S1 = String(N2);
+//let S2 = String(N1);
+console.log(String(N2)/String(N1)); //2
 
 console.log(Boolean(T1));
 console.log(Boolean(N3));
