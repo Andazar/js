@@ -25,7 +25,5 @@ let S1 = String(N2);
 let S2 = String(N1);
 console.log(S1/S2); //2
 
-Boolean(T1);
-Boolean(N3);
-console.log(T1);
-console.log(N3);
+console.log(Boolean(T1));
+console.log(Boolean(N3));
