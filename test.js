@@ -7,6 +7,7 @@ let T3;
 let T4;
 let N1 = 10;
 let N2 = 20;
+let N3 = 0;
 
 T3 = T2;
 T4 = T1;
@@ -21,3 +22,7 @@ console.log(`${N1} ${N2}`); //смотреть по F12
 console.log(`${T3} ${T4}`); //смотреть по F12
 
 
+Console.log(String(N2) / String(N1)); //2
+
+Console.log(Boolean(T1));
+Console.log(Boolean(N3));
