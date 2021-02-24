@@ -18,6 +18,6 @@ console.log(T1, T2);//смотреть по F12
 console.log(T3, T4);//смотреть по F12
 console.log(`${N1} ${N2}`); //смотреть по F12
 
-console.log(`${T1} ${T2}`); //смотреть по F12
+console.log(`${T3} ${T4}`); //смотреть по F12
 
 
