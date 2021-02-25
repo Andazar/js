@@ -222,13 +222,13 @@ function sleep() {
 function eat() {
   switch (time) {
   case 2: 
-  case 4:  console.log("Ест на спине");
+  case 4:  console.log("Ест сухой корм");
            break;
   case 6: 
-  case 8:  console.log("Ест на животе");
+  case 8:  console.log("Ест влажный корм");
            break;
   case 10:         
-  case 12:  console.log("Ест на боку");
+  case 12:  console.log("Пьет воду");
            break;
   default: console.log("Нет такого часа");
            break;  
