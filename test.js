@@ -85,12 +85,58 @@ let numStr, de = 2;
   for(let i = 2; i < num; i++)
   {
     if(num % i === 0) {numStr = "Не простое";}
-    else {numStr= "Простое"}
+    else {numStr= "Простое"; de++}
   }
 
-
+let out = numStr; 
 
 console.log(numStr, "Делитель")*/
 
 
 
+let month = 2;
+let monthString;
+let seezString;
+switch (month) {
+    case 1:  monthString = "Январь";
+             seezString = "Зимний";
+             break;
+    case 2:  monthString = "Февраль";
+             seezString = "Зимний";
+             break;
+    case 3:  monthString = "Март";
+             seezString = "Весенний";
+             break;
+    case 4:  monthString = "Апрель";
+             seezString = "Весенний";
+             break;
+    case 5:  monthString = "Май";
+             seezString = "Весенний";
+             break;
+    case 6:  monthString = "Июнь";
+             seezString = "Летний";
+             break;
+    case 7:  monthString = "Июль";
+             seezString = "Летний";
+             break;
+    case 8:  monthString = "Август";
+             seezString = "Летний";
+             break;
+    case 9:  monthString = "Сентябрь";
+             seezString = "Осенний";
+             break;
+    case 10: monthString = "Октябрь";
+             seezString = "Осенний";
+             break;
+    case 11: monthString = "Ноябрь";
+             seezString = "Осенний";
+             break;
+    case 12: monthString = "Декабрь";
+             seezString = "Зимний";
+             break;
+    default: monthString = "Неизвестен";
+             seezString = "неизвестный";
+              break;
+         
+}
+console.log(monthString+" - Это "+seezString+"  месяц");
