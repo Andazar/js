@@ -174,3 +174,30 @@ function func(n) {
 }
 console.log(func(0)); // номер в последовательности
 */
+
+//Function Declaration
+function sayHi(msg) {
+  return "Hi, " + msg;
+}
+
+//Function Expression
+let sayHello = function(msg) {
+  return "Hello, " + msg;
+};
+
+let myFunc = sayHello;
+let myFunc2 = sayHi;
+
+console.log(sayHello("World"));
+console.log(sayHi("World"));
+console.log(myFunc("World"));
+console.log(myFunc2("World"));
+
+
+let func1 = arg1 => {return "Hello, " + arg1};
+
+console.log(func1("World!!!"));
+
+let func2 = arg2 => arg2*5;
+
+console.log(func2(10));
