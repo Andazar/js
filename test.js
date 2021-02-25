@@ -193,7 +193,7 @@ console.log(sayHi("World"));
 console.log(myFunc("World"));
 console.log(myFunc2("World"));
 
-
+//Анонимные функции
 let func1 = arg1 => {return "Hello, " + arg1};
 
 console.log(func1("World!!!"));
@@ -201,3 +201,48 @@ console.log(func1("World!!!"));
 let func2 = arg2 => arg2*5;
 
 console.log(func2(10));
+
+//---Жизнь кота---------
+let time = 10
+function sleep() {
+  switch (time) {
+    case 1: 
+    case 3:  console.log("Спит на спине");
+             break;
+    case 5: 
+    case 7:  console.log("Спит на животе");
+             break;
+    case 11:         
+    case 9:  console.log("Спит на боку");
+             break;
+    default: console.log("Нет такого часа");
+             break;  
+   }
+}
+function eat() {
+  switch (time) {
+  case 2: 
+  case 4:  console.log("Ест на спине");
+           break;
+  case 6: 
+  case 8:  console.log("Ест на животе");
+           break;
+  case 10:         
+  case 12:  console.log("Ест на боку");
+           break;
+  default: console.log("Нет такого часа");
+           break;  
+   }
+}
+let catLife = function(time, sleep,eat) {
+
+  if( time%2==0){
+    return eat()
+  }
+  else{
+    return sleep()
+  }
+
+};
+
+catLife(time, sleep,eat)
