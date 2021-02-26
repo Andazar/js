@@ -522,3 +522,65 @@ for (let i=0; i<1000000; i++) {
   };
 }
 console.log( count );
+/*
+//---------
+try {
+
+  console.log('Начало блока try');  // (1) <--
+    lalala; // ошибка, переменная не определена!
+    console.log('Конец блока try (никогда не выполнится)');  // (2)
+  
+  } catch(err) {
+      //alert(err.message); // (3) <--
+    console.log(err);
+  }
+  
+  //---------
+try {
+
+  console.log('Начало блока try');  // (1) <--
+    lalala; // ошибка, переменная не определена!
+  console.log('Конец блока try (никогда не выполнится)');  // (2)
+  
+  } catch(err) {
+    //alert(err.message); // (3) <--
+    console.log(err);   
+  }
+
+  throw new Error("Моя ошибка")
+
+*/
+
+
+let catMood = new Promise(
+  function (resolve, reject) {
+    let isHappy = Math.random()>=0.5;
+    if (isHappy) {
+      var meow = {
+          text: "Мяу ! ",
+          length: Math.trunc((Math.random()+0.1)*10)
+       };
+      resolve(meow); // Успех
+    } else {
+      var reason = new Error('Cat is angry');
+      reject(reason); // Отказ
+      }
+  
+  }
+  );
+  
+  catMood
+      .then(function (result) {
+        //resolve
+        console.log(result)
+        let s="";
+        for (let i = 0; i < result.length; i++) {
+          s=s+result.text;
+         }
+      console.log(s);
+  
+    })
+  .catch(function (error) {
+  // reject
+  console.log(error.message);
+  });
