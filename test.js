@@ -173,7 +173,7 @@ function func(n) {
   return n <= 1 ? n : func(n - 1) + func(n - 2);
 }
 console.log(func(0)); // номер в последовательности
-*/
+
 
 //Function Declaration
 function sayHi(msg) {
@@ -245,4 +245,55 @@ let catLife = function(time, sleep,eat) {
 
 };
 
-catLife(time, sleep,eat)
+catLife(time, sleep,eat)*/
+
+//Объект кот
+let MyCat = {
+  name: "Meera",
+  breed: "Main-kun",
+  age: 1,
+  weight: 4,
+  isAngry: false
+};
+//--
+console.log("-----Свойства кота-----");
+console.log(MyCat);
+console.log(MyCat.name);
+//--
+console.log(MyCat.isAngry);
+MyCat.isAngry = true;
+console.log(MyCat.isAngry);
+delete MyCat.isAngry;
+console.log(MyCat.isAngry);
+//--
+console.log(MyCat["breed"]);
+//--
+let propName = "weight";
+console.log(MyCat[propName]);
+//--
+console.log("name" in MyCat ); // true
+console.log("race" in MyCat ); // false
+//--
+console.log("-----Все свойства кота-----");
+for (let prop in MyCat) {
+  console.log(prop+":  "+MyCat[prop]);
+  //console.log(MyCat[prop]);
+}
+
+
+
+let MyCount = {
+  10: "Первое",
+  30: "Второе",
+  20: "Третье",
+  50: "Четвертое",
+  40: "Пятое"
+};
+
+ MyCat.isAngry;
+//--
+console.log("-----Все свойства счета-----");
+for (let prop in MyCount) {
+  console.log(prop+":  "+MyCount[prop]);
+  //console.log(MyCount[prop]);
+}
