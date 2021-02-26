@@ -247,6 +247,7 @@ let catLife = function(time, sleep,eat) {
 
 catLife(time, sleep,eat)*/
 
+
 //Объект кот
 let MyCat = {
   name: "Meera",
@@ -255,7 +256,7 @@ let MyCat = {
   weight: 4,
   isAngry: false
 };
-//--
+/*//--
 console.log("-----Свойства кота-----");
 console.log(MyCat);
 console.log(MyCat.name);
@@ -290,10 +291,96 @@ let MyCount = {
   40: "Пятое"
 };
 
- MyCat.isAngry;
+
 //--
 console.log("-----Все свойства счета-----");
 for (let prop in MyCount) {
   console.log(prop+":  "+MyCount[prop]);
   //console.log(MyCount[prop]);
 }
+
+//--
+let YourCount = MyCount;
+YourCount[30]= "Шестое";
+
+delete YourCount[40];
+
+console.log(MyCount);
+console.log(YourCount);
+
+//--
+const MyCount2 = {
+  10: "Первое",
+  30: "Второе",
+  20: "Третье",
+  50: "Четвертое",
+  40: "Пятое"
+};
+//--
+console.log("-----Все свойства счета №2-----");
+
+//--
+let YourCount2 = MyCount2;
+YourCount2[30]= "Шестое";
+delete YourCount2[40];
+
+console.log(MyCount2);
+console.log(YourCount2);
+*/
+function Cat(name, breed, color, hungerThreshold) {
+  this.name = name;
+  this.breed = breed;
+  this.color = color;
+  this.hungerThreshold = hungerThreshold;
+
+  this.eat = function(n) {
+    let hungerMes;
+    if (n<this.hungerThreshold)
+    {hungerMes = "голоден, не доволен, бегает за тобой и просит еще" }
+    else {hungerMes = "доволен, сыт и идет спать"} ;
+  console.log(this.color+ "  "+this.breed+ "  "+this.name+" съев "+
+              n+" кг. корма "+hungerMes+" МЯЯЯУ!" );
+  };
+
+};
+
+function Dog(name, breed, color, hungerThreshold) {
+  this.name = name;
+  this.breed = breed;
+  this.color = color;
+  this.hungerThreshold = hungerThreshold;
+
+  this.eat = function(n) {
+    let hungerMes;
+    if (n<this.hungerThreshold)
+    {hungerMes = "голоден, не доволен, бегает за тобой и просит еще" }
+    else {hungerMes = "доволен, сыт, виляет хвостом и идет спать"} ;
+  console.log(this.color+ "  "+this.breed+ "  "+this.name+" съев "+
+              n+" кг. корма "+hungerMes+" ГАВ ГАВ!" );
+};
+let Cat1 = new Cat("Мурзик", "манул", "Серый", 2);
+let Cat2 = new Cat("Мира", "майн-кун", "Рыжая черепаха", 3);
+let Dog1 = new Dog("Шарик", "шпиц", "черный", 4);
+let Dog2 = new Dog("Борбос", "бульдог", "белый", 7);
+//--Новые коты
+Cat.prototype.sayMeow = function(m) {
+  console.log("Мяу !");
+};
+
+Dog.prototype.sayGav = function(g) {
+  console.log("Гав Гав!");
+};
+
+console.log(Cat1 instanceof Cat);
+console.log(Cat2 instanceof Cat);
+
+Cat1.eat(1)
+Cat1.eat(3)
+Cat2.eat(2)
+Cat2.eat(3)
+
+Cat1.sayMeow(1);
+Dog1.sayGav(1);
+
+Cat2.sayMeow(1);
+Dog2.sayGav(1);
