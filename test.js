@@ -413,3 +413,44 @@ let Cat5 = new ClasCat("Эдуард", "мейн-кун", "Рыжий", 5);
 Cat3.eat(9);
 Cat5.eat(2);
 
+//--Животные
+console.log("---Как говорят Животные---");
+class Animal {
+  constructor(name) {
+    this.name = name;
+    this.hasTail = true;
+  }
+  say() {
+    console.log("Животное " + this.name + " говорит: Привет человече! У тебя глюки, я животное.");
+  }
+}
+
+class Cat7 extends Animal {
+  constructor(name, breed) {
+    super(name);
+    this.breed = breed;
+  }
+  say() {    console.log("Кот " + this.name + " говорит: Мяу!");  }
+}
+
+class Dog3 extends Animal {
+  constructor(name, breed) {
+    super(name);
+    this.breed = breed;
+  }
+  say() {    console.log("Пес " + this.name + " говорит: Гав гав!");  }
+}
+
+class Horse extends Animal {
+  constructor(name) {
+    super(name);
+  }
+}
+
+let cat = new Cat7("Мурзик");
+let dog = new Dog3("Пафнутий");
+let horse = new Horse("Бурушка");
+
+cat.say();
+dog.say();
+horse.say();
