@@ -454,3 +454,71 @@ let horse = new Horse("Бурушка");
 cat.say();
 dog.say();
 horse.say();
+
+//Массив
+let numbers = [ 1, 2, 3, 4, 5, 6];
+ 
+function square(value) {
+     
+    return result = value * value+1;
+};
+ 
+let squareArray = numbers.map(square);
+console.log(squareArray);
+
+///Счастливые билеты
+(function(){
+  var digits = {},
+       i, tmp;
+  for (i = 0; i <= 999; i += 1) {
+       tmp = i % 10 + ((i % 100) - (i % 10)) / 10 + (i / 100) ^ 0; 
+       if (digits[tmp] === undefined) {
+           digits[tmp] = 1;
+       } else {
+           digits[tmp] += 1;
+       }
+  }
+  tmp = 0;
+  for (i in digits) {
+      tmp += digits[i] * digits[i];
+  }
+  console.log( tmp );
+ }());
+
+ //-------------
+ /*
+ for (let i=100000; i<1000000; i++)
+ {
+  let arr=[];
+  i.toString().split("").forEach(element => arr.push(+element));
+  let arr1 =arr.slice(0, 3);
+  let arr2 = arr.slice(3);
+  
+  function summ(a, b) 
+    {
+    return a + b;
+    }
+  let total1 = arr1.reduce(summ);
+  let total2 = arr2.reduce(summ);
+  if(total1===total2){
+
+    //console.log(`билет ${i} счастливый!`)
+  }
+  }
+*/
+
+
+function lucky(n){
+  let str = String(n).padStart(6,"0");
+  let sum1 = Number(str[0]) + Number(str[1])+ Number(str[2]);
+  let sum2 = Number(str[3]) + Number(str[4])+ Number(str[5]);
+  return sum1 == sum2;
+}
+
+let count = 0
+for (let i=0; i<1000000; i++) {
+  if (lucky(i)){
+    count++
+  };
+}
+console.log( count );
